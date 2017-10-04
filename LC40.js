@@ -30,7 +30,7 @@ const combination = (sortedSet, remain, sol, result, index)=>{
     }else{
         for(let i=index ; i<sortedSet.length; i++){
             if(sortedSet[i]>remain) return;
-            if(i > index && sol[i] === sol[i-1]) continue; /** skip duplicates */
+            // if(sol[i] === sol[i-1]) continue; /** skip duplicates */
             sol.push(sortedSet[i]);
             combination(sortedSet, remain-sortedSet[i], sol, result, i+1);
             sol.pop();
@@ -38,4 +38,7 @@ const combination = (sortedSet, remain, sol, result, index)=>{
     }
 
 };
-console.log(combinationSum2([10, 1, 2, 7, 6, 1, 5],8));
+// console.log(combinationSum2([10, 1, 2, 7, 6, 1, 5],8));
+
+
+console.log(combinationSum2([1,5,2,3,1,5,1,2,4,1,4],3))
