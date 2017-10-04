@@ -21,16 +21,15 @@ var combinationSum2 = function(candidates, target) {
 };
 
 const combination = (sortedSet, remain, sol, result, index)=>{
-
-
     if(remain<0) return;
     else if(remain===0){
-        console.log(sol);
+        // console.log(sol);
         result.push(sol.toString());
     }else{
         for(let i=index ; i<sortedSet.length; i++){
+            console.log('index:'+index, 'i:'+i,sol)
             if(sortedSet[i]>remain) return;
-            // if(sol[i] === sol[i-1]) continue; /** skip duplicates */
+            // if(i>index && sol[i] === sol[i-1]) continue; /** skip duplicates */
             sol.push(sortedSet[i]);
             combination(sortedSet, remain-sortedSet[i], sol, result, i+1);
             sol.pop();
@@ -38,7 +37,7 @@ const combination = (sortedSet, remain, sol, result, index)=>{
     }
 
 };
-// console.log(combinationSum2([10, 1, 2, 7, 6, 1, 5],8));
+console.log(combinationSum2([10, 1, 2, 7, 6, 1, 5],8));
 
 
-console.log(combinationSum2([1,5,2,3,1,5,1,2,4,1,4],3))
+// console.log(combinationSum2([1,5,2,3,1,5,1,2,4,1,4],3))
