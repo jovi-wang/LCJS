@@ -66,7 +66,6 @@ const isAnagrams2 = (str,p)=>{
 
 // console.log(findAnagrams('ababababa','ab'))
 
-
 var findAnagrams3 = function(s, p) {
     const out=[];
     if(s.length<p.length) return out;
