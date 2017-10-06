@@ -69,30 +69,29 @@ const isAnagrams2 = (str,p)=>{
 var findAnagrams3 = function(s, p) {
     const out=[];
     if(s.length<p.length) return out;
-    const hash={};
+    const pmap=new Array(26);
+    pmap.fill(0);
     for(let i=0;i<p.length;i++){
-        let char = p.charAt(i);
-        hash[char] = hash[char]>0? hash[char]+1 : 1;
+        let index=p.charCodeAt(i)-'a'.charCodeAt(0);
+        pmap[index]++;
     }
-    let left=0, right=0, count=p.length;
-    while(right<s.length){
-        //if char at right appear in hash, decrease count
-        if(hash[s.charAt(right)]>=0){
-            hash[s.charAt(right)]--;
-            count--;
-            right++;
+    for(let i=0;i<=s.length-p.length;i++){
+        const smap=new Array(26);
+        smap.fill(0);
+        for(let j=0;j<p.length;j++){
+          let index=s.charCodeAt(i+j)-'a'.charCodeAt(0);
+          smap[index]++;
         }
-        //if char at left appear in hash, increase count
-        if(right-left===p.length && hash[s.charAt(left)]>=0) {
-            hash[s.charAt(left)]++;
-            count++;
-            left++;
-        }
-        if(count===0){
-            out.push(left);
-        }
+        if(match(pmap,smap)) out.push(i);
     }
     return out;
+};
+
+const match=(s1map,s2map)=>{
+    for(let i=0;i<s1map.length;i++){
+        if (s1map[i] !== s2map[i]) return false;
+    }
+    return true;
 };
 
 console.log(findAnagrams3("cbaebabacd",'abc'))
