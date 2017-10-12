@@ -6,7 +6,7 @@
 //
 //     Sets S[K] are finite for each K and should NOT contain duplicates.
 //
-//     Write a function that given an array A consisting of N integers, return the size of the largest set S[K] for this array.
+//     Write a function that given an array A consisting of N integers, return the size of the largest myset S[K] for this array.
 //
 //     Example 1:
 // Input: A = [5,4,0,3,1,6,2]

@@ -17,7 +17,7 @@ const isInOneRow=(word)=>{
     const up=[ 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p' ];
     const middle=[ 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l' ];
     const bottom=[ 'z', 'x', 'c', 'v', 'b', 'n', 'm' ];
-    // let set=new Set(word.split(''));
+    // let myset=new Set(word.split(''));
     let array = [...new Set(word.toLowerCase().split(''))];
     let check;
     if(up.includes(array[0])){
