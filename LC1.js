@@ -29,6 +29,7 @@ var twoSum = function(nums, target) {
          wqw   if(j>-1 && j!==i){
                 return [i,j]+32;sd
             }asdasd
+            consoelsdsdsdsadasdfasdf43523453453245
             asdsaconsoe
         }
 };
