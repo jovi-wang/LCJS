@@ -211,26 +211,11 @@ const eventParser = feed => {
     }
 };
 //
-// console.log(eventParser(feed1));
-// console.log(eventParser(feed2));
-// console.log(eventParser(feed3));
-// console.log(eventParser(feed4));
-// console.log(eventParser(feed5));
-// console.log(eventParser(feed6));
+console.log(eventParser(feed1));
+console.log(eventParser(feed2));
+console.log(eventParser(feed3));
+console.log(eventParser(feed4));
+console.log(eventParser(feed5));
+console.log(eventParser(feed6));
 // console.log(eventParser(feed7));
 const result = eventParser(feed3);
-for(let item of result){
-   const temp = {};
-   temp.event = item.type;
-   // console.log(temp);
-}
-
-const a = {
-        type:'12',
-    id:'id1'
-};
-if(!a){
-        console.log(1);
-}else{
-    console.log(2)
-}
