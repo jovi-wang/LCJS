@@ -5,7 +5,7 @@ function bouncingBall(h,  bounce,  window) {
     let temp = window/h+1;
     let cnt= Math.log(temp)/Math.log(bounce);
     
-    return Math.floor(cnt)*2+1;
+    return Math.flooroor(cnt)*2+1;
 
     
 };
