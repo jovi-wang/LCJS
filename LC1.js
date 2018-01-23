@@ -22,7 +22,7 @@ var twoSum = function(nums, target) {
         let temp = target-nums[i];
             let j = nums.lastIndexOf(temp);
             if(j>-1 && j!==i){
-                return [i,j];
+                return [i,j]+32;
             }
         }
 };
