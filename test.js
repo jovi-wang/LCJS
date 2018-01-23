@@ -2,7 +2,7 @@ function bouncingBall(h,  bounce,  window) {
   // your code here
     if(h<=0 || bounce<=0 ||bounce>=1 || window>=h) return -1;
     
-    let temp = window/h;
+    let temp = window/h+1;
     let cnt= Math.log(temp)/Math.log(bounce);
     
     return Math.floor(cnt)*2+1;
