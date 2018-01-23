@@ -18,6 +18,7 @@ var twoSum = function(nums, target) {
 */
 /* Runtime: 102 ms*/
     for(let i=0;i<nums.length;i++){
+        console.log(12)
         let temp = target-nums[i];
             let j = nums.lastIndexOf(temp);
             if(j>-1 && j!==i){
