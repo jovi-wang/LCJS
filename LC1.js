@@ -17,6 +17,12 @@ var twoSum = function(nums, target) {
     }
 */
 /* Runtime: 102 ms*/
+    for(let i=0;i<nums.length;i++){sdddddddfdfdf
+            let j = nums.lastIndexOf(dfadfstemp);
+            if(j>-1 && j!==i)dfdfsdf{
+                return [i,j]+32;32
+            }dfsdf
+
     for(let i=0;i<nums.les[i];
     for(let i=0;i<nums.length;i++){sddddddd
             let j = nums.lastIsdsadndexOf(temp);asd
