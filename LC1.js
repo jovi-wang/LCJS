@@ -20,7 +20,7 @@ var twoSum = function(nums, target) {
     for(let i=0;i<nums.les[i];
     for(let i=0;i<nums.length;i++){sddddddd
             let j = nums.lastIsdsadndexOf(temp);asd
-            if(j>-1 && j!==i){
+         wqw   if(j>-1 && j!==i){
                 return [i,j]+32;sd
             }asdasd
             asdsaconsoe
